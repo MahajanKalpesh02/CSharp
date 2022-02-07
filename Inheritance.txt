@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practical5
+{
+    internal class Program
+    {
+        class Laptop
+        {
+            
+            public void show()
+            {
+                Console.WriteLine(" INFORMATION ABOUT LAPTOP ");
+                string name;
+                name = "HP";
+                Console.WriteLine("The Laptop Brand is :- "+name);
+            }
+        }
+        class Model : Laptop
+        {
+            public void read()
+            { 
+                int modelNo; 
+                modelNo= 30950934;
+                Console.WriteLine("The Model  Number is :- "+modelNo);
+            }
+        }
+        class Price : Model
+        {
+            public void print()
+            {
+
+                int price;
+                price=75000;
+                Console.WriteLine("The Balance  In Your Account Is :-"+price +"Rs. ");
+            }
+        }
+        static void Main(string[] args)
+        {
+           Price p1= new Price();
+                      
+            p1.show();
+            p1.read();
+            p1.print();
+            Console.ReadLine();
+        }
+    }
+}

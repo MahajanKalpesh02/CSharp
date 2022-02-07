@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practical4
+{
+
+    internal class sum
+    {
+        int r;
+         sum() 
+        {
+            Console.WriteLine("The Sum  of Two Numbers is :- ");
+               
+        }
+        sum(int a,int b)
+        {
+            r = a + b;
+        }
+        void display()
+        {
+            Console.WriteLine(r);
+        }
+        public static void Main(string [] agrs)
+        {
+            int a;
+            int b;
+
+            Console.WriteLine("Enter the first  nubmer :- ");
+            a=Convert.ToInt32(Console.ReadLine());
+            
+            Console.WriteLine("Enter the Second Number :-");
+            b=Convert.ToInt32(Console.ReadLine());
+
+            sum s1 = new sum();
+
+            sum s2 = new sum(a,b);
+            s2.display();
+
+            Console.ReadLine();
+
+        }
+    }
+    //internal class car
+    //{
+    //        string brand;
+    //        int price;
+    //    // Parameterized constructor
+    //    car(string thebrand,int theprice)
+    //    {
+    //        brand = thebrand;
+    //        price = theprice;
+    //    }
+    //    static void Main(string[] args)
+    //    {
+    //        car c = new car("Bugatti", 500000);
+    //        Console.WriteLine("Car Brand is :- "+c.brand);
+    //        Console.WriteLine("Car Price is :- "+c.price);
+    //        Console.ReadLine();
+    //    }
+    //}
+}
