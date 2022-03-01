@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Switch
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int ch;
+            string Continue;
+            do
+            {
+                int per;
+                
+                Console.WriteLine("Enter Your percentage : ");
+                per = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter Your Choice (1 - above 70%) (2 - above 60%) ( 3 - above 50%) (4)");
+                 ch = Convert.ToInt32(Console.ReadLine());
+                switch (ch)
+                {
+                    case 1:
+                        Console.WriteLine("You Got DISTINCTION  with : "+per);
+                        break;
+
+                     case 2:
+                        Console.WriteLine("You Got CREDIT CLASS with : "+per);
+                        break;
+                    case 3:
+                        Console.WriteLine("You Got PASS CLASS with : "+per);
+                        break;
+
+                      case 4:
+                        Console.WriteLine("Faild");
+                        break;
+
+                        default: Console.WriteLine( "invalid");
+                        break;
+                }
+           
+                Console.WriteLine("do you want to Continue? (Y/N) :");
+                Continue = Console.ReadLine();
+            } while(Continue !="N" && Continue!="n"); 
+            Console.ReadLine();
+        }
+    }
+}
