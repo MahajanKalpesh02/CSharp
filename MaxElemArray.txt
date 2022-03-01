@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MaxElementsArray
+{
+    internal class Program
+    {
+        int i,n, max = 0;
+       
+        int[] arr = new int[10];
+     
+        void arr1()
+        {
+            //int[] arr = new int[10];
+
+            Console.WriteLine("Enter the Size Of Array ");
+            n=Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the Array ");
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+        void maxe()
+        {
+            for (i = 0; i<10; i++)
+            {
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                }
+            }
+            Console.WriteLine("max element in array is " + max);
+        }
+        
+        static void Main(string[] args)
+        {
+            
+            Program p = new Program();
+            p.arr1();
+            p.maxe();
+            Console.ReadLine();
+           
+        }
+    }
+}
