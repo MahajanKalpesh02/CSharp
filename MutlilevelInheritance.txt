@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MultilevelInheritance
+{
+    public class A
+    {
+        public int a;
+        public void read(int x)
+        {
+            a= x;
+        }
+    }
+    public class B : A
+    {
+        public int b;
+        public void read1(int y)
+        {
+            b= y;
+        }
+
+    }
+    public class C : B
+    {
+        public int c;
+        public void display()
+        {
+            c = a * b;
+            Console.WriteLine("The Multiplication of "+a+" & "+b+" is "+c);
+        }
+    }
+        class main
+        {
+            static void Main(string[] args)
+            {
+            int x, y;
+            Console.WriteLine("Enter the Number");
+            x=Convert.ToInt32(Console.ReadLine());
+            y=Convert.ToInt32(Console.ReadLine());
+            C c = new C();
+            c.read(x);
+            c.read1(y);
+            c.display();
+
+            Console.ReadLine();
+            }
+        }
+    }
+

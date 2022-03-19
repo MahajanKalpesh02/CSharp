@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MultilevelInheritance1
+{
+    public class data
+    {
+        public int id;
+        public string pass;
+    }
+    public class empInfo : data
+    {
+        public void input()
+        {
+            Console.WriteLine("Enter the ID ");
+            id=Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the Password");
+            pass =Console.ReadLine();
+        }
+    }
+    public class print : empInfo
+    {
+        public void display()
+        {
+            Console.WriteLine("Your ID no is "+id);
+            Console.WriteLine(" Your Password is "+pass);
+        }
+    }
+    class main
+    {
+        static void Main(string[] args)
+        {
+            print p1=new print();
+            p1.input();
+            p1.display();
+        }
+    }
+}

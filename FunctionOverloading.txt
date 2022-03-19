@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FunctionOverloading
+{
+    internal class Program
+    {
+        public int c;
+        public void display(int x ,int y)
+        {
+            c = x * y;
+            Console.WriteLine("The Multiplication of "+x+" & "+y+" is :- "+c);   
+
+        }
+        public void display(int x, int y,int z)
+        {
+            c=x + y + z;
+            Console.WriteLine("The Addition of " + x + " & " + y + " & "+z+" is :- "+ c);
+        }
+    
+    }
+        class mainclass{
+        static void Main(string[] args)
+        {
+            int x,y,z;
+            Console.WriteLine("Enter the Number");
+            x=Convert.ToInt32(Console.ReadLine());
+            y=Convert.ToInt32(Console.ReadLine());
+            z=Convert.ToInt32(Console.ReadLine());
+            Program p1=new Program();
+            p1.display(x,y);
+            p1.display(x, y,z);
+            Console.ReadLine();
+        }
+    } 
+}
+
