@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SwapOverloading
+{
+    internal class Program
+    {
+        public int temp;
+       public void swap(int x ,int y)
+        {
+            Console.WriteLine("Before Swapping :- " + " X = " + x + " Y = " + y);
+           temp = x;
+           x= y;
+            y=temp;
+            Console.WriteLine("After Swapping :- " + " X = " + x + " Y = " + y);
+
+            Console.WriteLine(" ");
+        }
+
+        public void swap(float a, float b)
+        {
+           float temp;
+            Console.WriteLine("before swapping of floating Number :- " + " a = " + a + " b = " + b);
+            temp = a;
+            a = b;
+            b= temp;
+            Console.WriteLine("After Swapping of floating Number :- " + " a = "+a+ " b = "+b);
+        }
+                static void Main(string[] args)
+        {
+            int x,y;
+            Console.WriteLine("Enter the Number");
+            x=Convert.ToInt32(Console.ReadLine());
+            y=Convert.ToInt32(Console.ReadLine());
+
+            float a; float b;
+            Console.WriteLine("Enter the Float value");
+           a = Convert.ToSingle(Console.ReadLine());
+           b = Convert.ToSingle(Console.ReadLine());
+
+            Program p=new Program();    
+            p.swap(x,y);
+            p.swap(a,b);
+            Console.ReadLine();
+        }
+    }
+}
